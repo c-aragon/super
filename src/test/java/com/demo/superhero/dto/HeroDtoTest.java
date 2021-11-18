@@ -1,4 +1,4 @@
-package com.demo.superhero;
+package com.demo.superhero.dto;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
