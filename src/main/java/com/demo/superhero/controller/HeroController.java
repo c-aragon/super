@@ -12,38 +12,38 @@ import com.demo.superhero.dto.HeroDto;
 public interface HeroController {
 
 	/**
-	 * Create a new super hero.
-	 * @param heroDto Super hero data.
-	 * @return Object with super hero data.
+	 * Create a new superhero.
+	 * @param heroDto Superhero data.
+	 * @return Object with superhero data.
 	 */
 	HeroDto createHero(HeroDto heroDto);
-	
+
 	/**
 	 * Get Hero by id.
-	 * @param id Id's super hero.
-	 * @return Object with super hero data.
+	 * @param id Id's superhero.
+	 * @return Object with superhero data.
 	 */
 	HeroDto getHero(Long id);
-	
+
 	/**
 	 * Get heroes.
-	 * @return A list with super heroes.
+	 * @return A list with superheroes.
 	 */
 	List<HeroDto> getHeroes();
-	
+
 	/**
 	 * Update a super hero.
-	 * @param id Id of super hero.
-	 * @param heroDto Super hero data.
-	 * @return Object with super hero data.
+	 * @param id Id of superhero.
+	 * @param heroDto Superhero data.
+	 * @return Object with superhero data.
 	 */
 	HeroDto updateHero(Long id, HeroDto heroDto);
-	
+
 	/**
-	 * Logical delete of super hero.
-	 * @param id Id of super hero
-	 * @return Object with super hero data.
+	 * Logical delete of superhero.
+	 * @param id Id of superhero
+	 * @return Object with superhero data.
 	 */
 	HeroDto deleteHero(Long id);
-	
+
 }
