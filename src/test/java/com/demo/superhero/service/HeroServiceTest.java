@@ -1,4 +1,4 @@
-package com.demo.superhero.service.unit;
+package com.demo.superhero.service;
 
 import com.demo.superhero.entity.Hero;
 import com.demo.superhero.repository.HeroRepository;
