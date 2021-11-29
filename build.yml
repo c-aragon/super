@@ -1,0 +1,13 @@
+name: 'Compile'
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-job:
+    name: 'Compile gradle project'
+    runs-on: ubuntu-latest
+    container: gradle:7.1-alpine
+    steps:
+      - run : gradle clean test
