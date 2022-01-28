@@ -3,6 +3,7 @@
  */
 package com.demo.superhero.controller.impl;
 
+import java.util.Collections;
 import java.util.List;
 
 import com.demo.superhero.entity.Hero;
@@ -22,9 +23,9 @@ import com.demo.superhero.dto.HeroDto;
 @RestController
 public class SuperHeroControllerImpl implements HeroController {
 
-	private HeroService heroService;
+	private final HeroService heroService;
 
-	private ModelMapper modelMapper;
+	private final ModelMapper modelMapper;
 
 	@Autowired
 	public SuperHeroControllerImpl(final HeroService heroService, final ModelMapper modelMapper) {
@@ -38,8 +39,7 @@ public class SuperHeroControllerImpl implements HeroController {
 		Hero hero = modelMapper.map(heroDto, Hero.class);
 		hero = heroService.createHero(hero);
 		//Transform entity to dto
-		HeroDto newHeroDto = modelMapper.map(hero, HeroDto.class);
-		return newHeroDto;
+		return modelMapper.map(hero, HeroDto.class);
 	}
 
 	@Override
@@ -51,7 +51,7 @@ public class SuperHeroControllerImpl implements HeroController {
 	@Override
 	public List<HeroDto> getHeroes() {
 		// TODO Auto-generated method stub
-		return null;
+		return Collections.emptyList();
 	}
 
 	@Override
