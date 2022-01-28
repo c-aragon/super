@@ -5,11 +5,14 @@ import com.demo.superhero.repository.HeroRepository;
 import com.demo.superhero.service.HeroService;
 import com.demo.superhero.service.impl.HeroServiceImpl;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.event.annotation.BeforeTestClass;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -19,9 +22,8 @@ public class HeroServiceUnitTest {
     @Mock
     private HeroRepository heroRepository;
 
-    //Inyectas el objeto mockeado
     @InjectMocks
-    private HeroService heroService = new HeroServiceImpl(heroRepository);
+    private HeroServiceImpl heroService;
 
     @Test
     public void createHeroTest() {
@@ -31,7 +33,7 @@ public class HeroServiceUnitTest {
         hero.setName("Super hero for test");
 
         //Aca entra mockito. Le dices que cuando ejecutes el metodo save del repository te retorne el objeto hero
-        when(heroRepository.save(hero)).thenReturn(hero);
+        when(heroRepository.save(any(Hero.class))).thenReturn(hero);
 
         //Execute test
         Hero heroResponse = heroService.createHero(hero);

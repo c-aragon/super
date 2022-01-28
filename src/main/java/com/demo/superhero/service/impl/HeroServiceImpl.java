@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class HeroServiceImpl implements HeroService {
 
-    public HeroRepository heroRepository;
+    private final HeroRepository heroRepository;
 
     @Autowired
     public HeroServiceImpl(final HeroRepository heroRepository) {
