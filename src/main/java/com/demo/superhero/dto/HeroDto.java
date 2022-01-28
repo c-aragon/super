@@ -44,7 +44,7 @@ public class HeroDto {
 	 * Set super hero id.
 	 * @param id id's super hero.
 	 */
-	public void setId(final Long id) {
+	public void setId(final long id) {
 		this.id = id;
 	}
 	

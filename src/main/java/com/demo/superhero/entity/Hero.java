@@ -35,7 +35,7 @@ public class Hero {
      * Set id.
      * @param id id
      */
-    public void setId(final Long id) {
+    public void setId(final long id) {
         this.id = id;
     }
 

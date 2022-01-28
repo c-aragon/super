@@ -23,7 +23,7 @@ public interface HeroController {
 	 * @param id Id's superhero.
 	 * @return Object with superhero data.
 	 */
-	HeroDto getHero(Long id);
+	HeroDto getHero(long id);
 
 	/**
 	 * Get heroes.
@@ -37,7 +37,7 @@ public interface HeroController {
 	 * @param heroDto Superhero data.
 	 * @return Object with superhero data.
 	 */
-	HeroDto updateHero(Long id, HeroDto heroDto);
+	HeroDto updateHero(long id, HeroDto heroDto);
 
 	/**
 	 * Logical delete of superhero.
