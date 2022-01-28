@@ -43,7 +43,7 @@ public class SuperHeroControllerImpl implements HeroController {
 	}
 
 	@Override
-	public HeroDto getHero(Long id) {
+	public HeroDto getHero(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -55,7 +55,7 @@ public class SuperHeroControllerImpl implements HeroController {
 	}
 
 	@Override
-	public HeroDto updateHero(Long id, HeroDto heroDto) {
+	public HeroDto updateHero(long id, HeroDto heroDto) {
 		// TODO Auto-generated method stub
 		return null;
 	}
