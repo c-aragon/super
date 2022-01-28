@@ -44,6 +44,6 @@ public interface HeroController {
 	 * @param id Id of superhero
 	 * @return Object with superhero data.
 	 */
-	HeroDto deleteHero(Long id);
+	HeroDto deleteHero(long id);
 
 }

@@ -61,7 +61,7 @@ public class SuperHeroControllerImpl implements HeroController {
 	}
 
 	@Override
-	public HeroDto deleteHero(Long id) {
+	public HeroDto deleteHero(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
